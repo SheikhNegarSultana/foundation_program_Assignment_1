@@ -39,3 +39,27 @@ getDayType("Friday")
 getDayType("friday")	
 getDayType("MONDAY")	
 getDayType("Bandarban")
+
+
+// Question 3: Username Gatekeeper
+function validateUsername(username){
+    const len = username.length;
+    if(len < 4){
+        console.log("Too Short");
+    } else if(username.includes(' ')){
+        console.log("No Space Allowed");
+    } else if(username.toLowerCase().includes("admin")){
+        console.log("Reserved Word");
+    }
+    else{
+        console.log("Available");
+    }
+}
+
+validateUsername("rahim123")	
+validateUsername("ab")	
+validateUsername("a b")	
+validateUsername("abcd")	
+validateUsername("rahim islam")		
+validateUsername("superadmin99")
+validateUsername("Admin_Rahim")
