@@ -104,12 +104,12 @@ const getChaseVerdict = (target, scored, ballsLeft) => {
         return "Lost";
     }
     else{
-        requiredRate = (runsNeeded / ballsLeft) * 6;
+        let requiredRate = (runsNeeded / ballsLeft) * 6;
 
         if(requiredRate <= 6){
             return `Need ${runsNeeded} runs in ${ballsLeft} balls | Comfortable`;
         }
-        else if( requiredRate >= 6 && requiredRate <=12){
+        else if( requiredRate > 6 && requiredRate <=12){
             return `Need ${runsNeeded} runs in ${ballsLeft} balls | Tough`
         }
         else{
