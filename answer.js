@@ -63,3 +63,30 @@ validateUsername("abcd")
 validateUsername("rahim islam")		
 validateUsername("superadmin99")
 validateUsername("Admin_Rahim")
+
+
+// Question 4: Dhaka CNG Fare Meter
+function getCngFare(distance, isNight = false, waitingMinutes = 0){
+    let fare = 50;
+
+    if(distance >2 ){
+       fare = fare + (distance - 2) * 15;
+    }
+
+    fare = fare + (waitingMinutes*2);
+
+    if(isNight){
+        fare = fare*1.2;
+    }
+
+    console.log(fare);
+
+}
+
+getCngFare(2)	
+getCngFare(1)	
+getCngFare(5)	
+getCngFare(10)	
+getCngFare(5, false, 10)	
+getCngFare(5, true)	
+getCngFare(5, true, 10)
