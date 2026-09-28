@@ -1,19 +1,19 @@
 // Question 1: Value Detective
 
 function describeValue(value){
-    console.log(`${typeof(value)} | ${value? "truthy" : "falsy"}`);
+    return `${typeof(value)} | ${value? "truthy" : "falsy"}`;
 }
 
-describeValue("hello");
-describeValue("");
-describeValue(25);
-describeValue(0);
-describeValue(true);
-describeValue(null);
-describeValue(undefined);
-describeValue("0");
-describeValue(NaN);
-describeValue(null);
+console.log(describeValue("hello"));
+console.log(describeValue(""));
+console.log(describeValue(25));
+console.log(describeValue(0));
+console.log(describeValue(true));
+console.log(describeValue(null));
+console.log(describeValue(undefined));
+console.log(describeValue("0"));
+console.log(describeValue(NaN));
+console.log(describeValue(null));
 
 // Question 2: Bangladesh Weekend Machine
 
@@ -22,47 +22,47 @@ function getDayType(day_name){
 
     switch (true) {
         case day_name === "friday" || day_name === "saturday":
-            console.log("Weekend");
+            return "Weekend";
             break;
 
         case day_name === "sunday" || day_name === "monday" || day_name === "tuesday" || day_name === "wednesday" || day_name === "thursday":
-            console.log("Working Day");  
+            return "Working Day";  
             break;      
 
         default:
-            console.log("Invalid Day");
+            return "Invalid Day";
             
     }
 }
 
-getDayType("Friday")	
-getDayType("friday")	
-getDayType("MONDAY")	
-getDayType("Bandarban")
+console.log(getDayType("Friday"))	
+console.log(getDayType("friday"))	
+console.log(getDayType("MONDAY"))	
+console.log(getDayType("Bandarban"))
 
 
 // Question 3: Username Gatekeeper
 function validateUsername(username){
     const len = username.length;
     if(len < 4){
-        console.log("Too Short");
+        return "Too Short";
     } else if(username.includes(' ')){
-        console.log("No Space Allowed");
+        return "No Space Allowed";
     } else if(username.toLowerCase().includes("admin")){
-        console.log("Reserved Word");
+        return "Reserved Word";
     }
     else{
-        console.log("Available");
+        return "Available";
     }
 }
 
-validateUsername("rahim123")	
-validateUsername("ab")	
-validateUsername("a b")	
-validateUsername("abcd")	
-validateUsername("rahim islam")		
-validateUsername("superadmin99")
-validateUsername("Admin_Rahim")
+console.log(validateUsername("rahim123"))	
+console.log(validateUsername("ab"))	
+console.log(validateUsername("a b"))	
+console.log(validateUsername("abcd"))	
+console.log(validateUsername("rahim islam"))		
+console.log(validateUsername("superadmin99"))
+console.log(validateUsername("Admin_Rahim"))
 
 
 // Question 4: Dhaka CNG Fare Meter
@@ -79,14 +79,19 @@ function getCngFare(distance, isNight = false, waitingMinutes = 0){
         fare = fare*1.2;
     }
 
-    console.log(fare);
+    return fare;
 
 }
 
-getCngFare(2)	
-getCngFare(1)	
-getCngFare(5)	
-getCngFare(10)	
-getCngFare(5, false, 10)	
-getCngFare(5, true)	
-getCngFare(5, true, 10)
+console.log(getCngFare(2))	
+console.log(getCngFare(1))	
+console.log(getCngFare(5))	
+console.log(getCngFare(10))	
+console.log(getCngFare(5, false, 10))	
+console.log(getCngFare(5, true))	
+console.log(getCngFare(5, true, 10))
+
+
+
+// Question 5: Run Chase Commentator
+
